@@ -321,6 +321,11 @@ open class MeepMeep @JvmOverloads constructor(private val windowSize: Int, fps: 
                 colorManager.isDarkMode = false
                 ImageIO.read(classLoader.getResourceAsStream("background/season-2022-powerplay/field-2022-kai-light.png"))
             }
+            Background.CRI -> {
+                colorManager.isDarkMode = false
+                ImageIO.read(classLoader.getResourceAsStream("background/season-2022-powerplay/cri.png"))
+            }
+
 
         }.getScaledInstance(windowSize, windowSize, Image.SCALE_SMOOTH)
 
@@ -457,6 +462,7 @@ open class MeepMeep @JvmOverloads constructor(private val windowSize: Int, fps: 
         FIELD_FREIGHTFRENZY_ADI_DARK,
         FIELD_POWERPLAY_OFFICIAL,
         FIELD_POWERPLAY_KAI_DARK,
-        FIELD_POWERPLAY_KAI_LIGHT
+        FIELD_POWERPLAY_KAI_LIGHT,
+        CRI
     }
 }
